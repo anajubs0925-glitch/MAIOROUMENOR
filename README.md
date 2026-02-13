@@ -1,24 +1,29 @@
 import java.util.Scanner;
 
-public class SomaOuSubtracao {
+public class MaiorEMenor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n1, n2;
-
         System.out.print("Digite o primeiro número: ");
-        n1 = sc.nextInt();
+        int n1 = sc.nextInt();
 
         System.out.print("Digite o segundo número: ");
-        n2 = sc.nextInt();
+        int n2 = sc.nextInt();
 
-        if (n2 > n1) {
-            System.out.println("Soma: " + (n1 + n2));
-        } else if (n1 > n2) {
-            System.out.println("Subtração: " + (n1 - n2));
-        } else {
-            System.out.println("Os números são iguais.");
-        }
+        System.out.print("Digite o terceiro número: ");
+        int n3 = sc.nextInt();
+
+        int maior = n1;
+        int menor = n1;
+
+        if (n2 > maior) maior = n2;
+        if (n3 > maior) maior = n3;
+
+        if (n2 < menor) menor = n2;
+        if (n3 < menor) menor = n3;
+
+        System.out.println("Maior número: " + maior);
+        System.out.println("Menor número: " + menor);
 
         sc.close();
     }
